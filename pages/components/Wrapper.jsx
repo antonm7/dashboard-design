@@ -1,14 +1,18 @@
 import Navbar from "./Navbar";
 import { useStore } from '../store'
+import Sidebar from "./SideBar"
 
-export default function Wrapper({child}) {
+export default function Wrapper({children}) {
     const store = useStore()
 
     return (
-        <div id="screen" className={(store.theme === 'dark' ? 'dark' : 'light') + ' width height'}>
+        <div className={(store.theme === 'dark' ? 'dark' : 'light') + ' width height'}>
             <Navbar />
-            <div>
-                {child}
+            <div className="height flex">
+                <Sidebar />
+                <div id="main-screen">
+                    {children}
+                </div>
             </div>
         </div>
     )    
