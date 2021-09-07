@@ -8,8 +8,6 @@ export default function Index() {
 
   return (
     <div>
-      welcome
-      {store.theme}
       <button onClick={() => changeTheme()}>clicm me</button>
     </div>
   )
