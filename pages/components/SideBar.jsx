@@ -4,8 +4,12 @@ import IconLink from "./common/IconLink"
 export default function Sidebar() {
     return (
         <div id="sidebar" className="height">
-            <IconLink icon={faColumns} href="/"/>
-            <IconLink icon={faChartBar} href="/analytics"/>
+            <div>
+                <IconLink icon={faColumns} href="/"/>
+            </div>
+            <div>
+                <IconLink icon={faChartBar} href="/analytics"/>
+            </div>
         </div>
     )
 }

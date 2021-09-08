@@ -4,6 +4,12 @@ $font-color-dark:#737373;
 $light-navbar:#919191;
 $dark-navbar:#252525;
 $dark-shadow:#3a3a3a1e;
+$dark-box:#ebebeb;
+$light-box:#3d3d3d;
+$dark-box-color: #5f5f5f;
+$light-box-color:#b3b3b3;
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100&display=swap');
 
 body {
   padding: 0;
@@ -38,8 +44,16 @@ a {
       border: 2px solid #303030;
     }
   }
+  #body {
+    color: $font-color-dark;
+  }
   #sidebar {
     background-color: $dark-navbar;
+    color: $font-color-dark;
+  }
+  #dashboard-box {
+    background-color: $dark-box;
+    color: $dark-box-color;
   }
 }
 
@@ -53,6 +67,14 @@ a {
   }
   #sidebar {
     background-color: $light-navbar;
+    color: $font-color-dark;
+  }
+  #dashboard-box {
+    background-color: $light-box;
+    color: $light-box-color;
+  }
+  #body {
+    color: $font-color-dark;
   }
 }
 
@@ -93,13 +115,115 @@ a {
 }
 
 #main-screen {
-  width: calc(100vw - 10rem);
+  width: calc(100vw - 5rem);
 }
 
 #sidebar {
-  width: 10rem;
+  text-align: center;
+  padding: 2rem 0;
+  width: 5rem;
   height: calc(100vh - 5rem);
   box-shadow: inset 0px 200px 32px -200px rgba(26,26,26,1);
-
 }
 
+#icon-link {
+  font-size: 1.2rem;
+  margin: 1rem 0;
+}
+
+#credit-card {
+  width: 24rem;
+  height: 14rem;
+  border-radius: 2rem;
+  background-color: #222222;
+  padding: 0 1.5rem;
+  color: $font-color-dark;
+  #header {
+    padding-top: 2rem;
+    svg {
+      font-size: 1.4rem;
+    }
+    #number {
+      color: white;
+      font-size: 1.7rem;
+      padding-top: 1.8rem;
+      font-family: 'Noto Sans KR', sans-serif;    }
+  }
+  #bottom {
+    padding-top: 1rem;
+    font-size: 0.8rem;
+    justify-content: space-between;
+    #left {
+      p {
+        &:nth-child(2) {
+          color: white;
+        }
+      }
+    }
+    #right {
+      img {
+        height: 2rem;
+      }
+      P {
+        font-size: 0.6rem;
+      }
+    }
+  }
+}
+
+#index {
+  padding: 1rem 3rem;
+  #header {
+    .space {
+      padding: 1rem;
+    }
+  }
+}
+
+#dashboard-box {
+  width: 9rem;
+  height:9rem;
+  padding: 1rem;
+  border-radius: 2rem;
+  svg {
+    font-size: 1.4rem;
+  }
+  #para {
+    font-size: 0.8rem;
+    max-width: 6rem;
+    padding: 0.2rem 0;
+    padding-bottom: 0;
+  }
+  #amount {
+    font-size: 1.2rem;
+  }
+}
+
+#colored-box {
+  border-radius: 1.5rem;
+  width: 15rem;
+  height: 10rem;
+  margin: 1rem;
+  &:nth-child(1) {
+    margin-left:0;
+  }
+  text-align: center;
+  #number {
+    font-size: 2.2rem;
+    color: black;
+    font-weight: bold;
+    padding-top: 1.7rem;
+    margin: 0;
+  }
+  #title {
+    padding-top: 0.5rem;
+    margin: 0;
+    color: black;
+    font-size: 1rem;
+  }
+  #secTitle {
+    padding-top: 0.7rem;
+    margin: 0;
+    color: grey;
+  }
+}
